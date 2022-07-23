@@ -6,7 +6,7 @@ Mainly for use in the CatBoy lounge but can be used anywhere, you just might not
 
 install the libraries: discord.py, requests
 
-Then at the bottom of the "blahajbot.py" script, put in your discord application token, close the parenthesis and close the brackets, then run!
+Then at the bottom of the "blahajbot.py" script, put in your discord application token and run the bot!
 
 
 Enjoy the Blahaj bot script I made
