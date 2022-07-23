@@ -59,8 +59,7 @@ async def blahaj(ctx):
     global comms
     filenames = os.listdir(Blahajfoto)
     selected_file = os.path.join(Blahajfoto, random.choice(filenames))
-    embed = discord.Embed(
-        title="Blåhaj!", description="Here is your Blåhaj", color=0x5866ef)
+    embed = discord.Embed(title="Blåhaj!", description="Here is your Blåhaj", color=0x5866ef)
     embed.set_image(url="attachment://blahaj.png")
     await ctx.send(file=discord.File(selected_file, "blahaj.png"), embed=embed)
     comms += 1
@@ -87,18 +86,12 @@ async def help(ctx):
     embed = discord.Embed(title="halp ples", colour=0x5866ef)
 
     embed.add_field(name="blahaj", value="Sends a random photo of Blåhaj")
-    embed.add_field(
-        name="howgay", value="Makes Blåhaj tell you how gay you are")
-    embed.add_field(
-        name="quote", value="Makes Blåhaj pick a random useless quote from a list")
-    embed.add_field(name="lovetoshi",
-                    value="Express our love for our favourite catboy!")
-    embed.add_field(
-        name="uses", value="Shows how many commands have been used in total!")
-    embed.add_field(name="suggestions",
-                    value="writes the message after into a text file for suggestions!")
-    embed.add_field(
-        name="cheese", value="Send a random phot of cheese (I hate you hoiboi)")
+    embed.add_field(name="howgay", value="Makes Blåhaj tell you how gay you are")
+    embed.add_field(name="quote", value="Makes Blåhaj pick a random useless quote from a list")
+    embed.add_field(name="lovetoshi", value="Express our love for our favourite catboy!")
+    embed.add_field(name="uses", value="Shows how many commands have been used in total!")
+    embed.add_field(name="suggestions", value="writes the message after into a text file for suggestions!")
+    embed.add_field(name="cheese", value="Send a random phot of cheese (I hate you hoiboi)")
     await ctx.send(embed=embed)
     comms += 1
 
@@ -132,11 +125,9 @@ async def cheese(ctx):
         cheese_author = r.json()["author"]
         cheese_license = r.json()["license"]
         cheese_embed = discord.Embed(
-            title="Cheese (go away hoiboi)", color=discord.Color.gold())
-        cheese_embed.set_image(
-            url=f"https://cheesepics.xyz/images/cheese/{cheese_id}")
-        cheese_embed.set_footer(
-            text=f"Lmao the guy that made it was {cheese_author}, they did the licency thing by {cheese_license}")
+        title="Cheese (go away hoiboi)", color=discord.Color.gold())
+        cheese_embed.set_image(url=f"https://cheesepics.xyz/images/cheese/{cheese_id}")
+        cheese_embed.set_footer(text=f"Lmao the guy that made it was {cheese_author}, they did the licency thing by {cheese_license}")
         await ctx.send(embed=cheese_embed)
     else:
         await ctx.send("hoiboi did a fucky wucky")
