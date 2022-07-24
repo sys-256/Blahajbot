@@ -95,7 +95,6 @@ async def help(ctx):
     embed.add_field(name="quote", value="Makes Blåhaj pick a random useless quote from a list")
     embed.add_field(name="lovetoshi", value="Express our love for our favourite catboy!")
     embed.add_field(name="uses", value="Shows how many commands have been used in total!")
-    embed.add_field(name="suggestions", value="writes the message after into a text file for suggestions!")
     embed.add_field(name="cheese", value="Send a random phot of cheese (I hate you hoiboi)")
     await ctx.send(embed=embed)
     comms += 1
@@ -117,11 +116,6 @@ async def uses(ctx):
     comms += 1
 
 
-@client.command()
-async def suggestions(ctx, *, suggestions):
-    await ctx.send("suggestion noted!")
-    open("suggestions.txt", "ab").write(f"""{suggestions}
-    """.encode("utf-8"))
 
 
 @client.command()
