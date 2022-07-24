@@ -103,7 +103,6 @@ async def help(ctx):
 	embed.add_field(name="lovetoshi", value="Express our love for our favourite catboy!")
 	embed.add_field(name="uses", value="Shows how many commands have been used in total!")
 	embed.add_field(name="cheese", value="Send a random phot of cheese (I hate you hoiboi)")
-	embed.add_field(name="hash", value="a hashing command, reused from botcat cause why not")
 	embed.add_field(name="compliment", value="says a random compliment")
 	embed.add_field(name="invlink", value="sends the inv link")
 	await ctx.send(embed=embed)
@@ -127,14 +126,6 @@ async def uses(ctx):
 
 
 
-@client.command()
-async def hash(ctx, *, text):
-	global comms
-	string_to_hash = text
-	hash_object = hashlib.sha256(str(string_to_hash).encode('utf-8'))
-	texthash = hash_object.hexdigest()
-	await ctx.send(f"the sha256 equivalent of that is ```{texthash}```")
-	comms += 1
 
 @client.command()
 async def invlink(ctx):
