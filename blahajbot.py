@@ -105,6 +105,7 @@ async def help(ctx):
 async def lovetoshi(ctx):
     global comms
     await ctx.send("We love you Toshi!!!!")
+    await ctx.send(":pleading_face:")
     comms += 1
 
 
