@@ -79,6 +79,11 @@ async def quote(ctx):
     await ctx.send(random.choice(requests.get("https://raw.githubusercontent.com/PoggerCat/quote/main/alfieisberystopid").text.split("\n")))
     comms += 1
 
+@client.command()
+async def piss(ctx):
+    global comms
+    await ctx.send(":pleading_face:")
+    comms += 1
 
 @client.command()
 async def help(ctx):
