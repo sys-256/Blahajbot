@@ -112,6 +112,7 @@ async def lovetoshi(ctx):
 async def uses(ctx):
     global comms
     await ctx.send(f"{comms} commands have been used!")
+    await ctx.send("I'm in " + str(len(client.guilds)) + " servers!")
     comms += 1
 
 
