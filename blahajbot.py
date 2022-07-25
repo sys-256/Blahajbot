@@ -93,6 +93,12 @@ async def piss(ctx):
 	comms += 1
 
 @client.command()
+async def sugma(ctx):
+	global comms
+	await ctx.send("*slups nuts*")
+	comms += 1
+
+@client.command()
 async def help(ctx):
 	global comms
 	embed = discord.Embed(title="halp ples", colour=0x5866ef)
@@ -104,6 +110,7 @@ async def help(ctx):
 	embed.add_field(name="uses", value="Shows how many commands have been used in total!")
 	embed.add_field(name="cheese", value="Send a random phot of cheese (I hate you hoiboi)")
 	embed.add_field(name="compliment", value="says a random compliment")
+	embed.add_field(name="sugma", value="idk either tbh")
 	embed.add_field(name="invlink", value="sends the inv link")
 	await ctx.send(embed=embed)
 	comms += 1
